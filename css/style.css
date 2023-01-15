@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #161623;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+}
+.container .card {
+  background: #232323;
+  width: 320px;
+  height: 450px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.container .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: aqua;
+  -webkit-clip-path: circle(58.9% at 99% 0%);
+          clip-path: circle(58.9% at 99% 0%);
+  transition: 0.8s ease-in-out;
+}
+.container .card:hover .imgbox {
+  top: 80px;
+  transform: translateY(2) ease-in-out;
+}
+.container .card:hover .contentbox {
+  height: 200px;
+}
+.container .card:hover .contentbox .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.container .card:hover .contentbox .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+.container .card:hover .contentbox a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+.container .card:hover::before {
+  -webkit-clip-path: circle(67.9% at 0 0);
+          clip-path: circle(67.9% at 0 0);
+}
+.container .card::after {
+  content: "Nike";
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  font-size: 10em;
+  font-weight: 800;
+  z-index: 1;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.02);
+}
+.container .card .imgbox {
+  position: absolute;
+  top: 50%;
+  height: 220px;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.7s;
+  transform: translateY(-30%);
+}
+.container .card .imgbox img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+.container .card .contentbox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 10;
+}
+.container .card .contentbox h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+}
+.container .card .contentbox .size, .container .card .contentbox .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  opacity: 1;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.container .card .contentbox .size h3, .container .card .contentbox .size h3, .container .card .contentbox .color h3, .container .card .contentbox .color h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-right: 10px;
+}
+.container .card .contentbox .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  background: white;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 0 3px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.container .card .contentbox .size span:hover {
+  color: #111;
+  background: darkgoldenrod;
+}
+.container .card .contentbox .color span {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.container .card .contentbox .color span:nth-child(2) {
+  background: green;
+}
+.container .card .contentbox .color span:nth-child(3) {
+  background: rgb(0, 55, 255);
+}
+.container .card .contentbox .color span:nth-child(4) {
+  background: rgb(238, 110, 5);
+}
+.container .card .contentbox a {
+  display: inline-block;
+  padding: 10px 30px;
+  background: rgb(46, 231, 244);
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+  transform: translateY(50px);
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */
